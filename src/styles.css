@@ -1,0 +1,127 @@
+html,
+body {
+	--white: #fff;
+	--gray-light: rgb(244, 246, 248);
+	--black: #000000;
+	--accent-light: #d4f4dd;
+	--bg: #011627;
+	--highlight: rgb(234, 76, 136);
+	--accent: rgb(67, 133, 245);
+	--error: #de1a1a;
+	background-color: var(--bg);
+	color: var(--bg);
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-image: url('https://images.unsplash.com/photo-1514996937319-344454492b37?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb');
+	background-size: cover;
+	background-position: center;
+}
+
+.App {
+	font-family: sans-serif;
+	text-align: center;
+}
+
+button {
+	padding: 16px;
+	border-radius: 100px;
+	background-color: var(--accent);
+	border: 0;
+	cursor: pointer;
+	color: var(--white);
+}
+
+button:hover {
+	background-color: var(--highlight);
+	color: var(--white);
+}
+
+button:disabled {
+	background-color: transparent;
+	color: var(--bg);
+	border-color: var(--accent-light);
+	opacity: 0.5;
+	cursor: no-drop;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 32px;
+}
+
+.emailForm {
+	max-width: 340px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: left;
+	background-color: var(--white);
+	border-radius: 2px;
+	padding: 32px;
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+}
+
+input {
+	border: none;
+	border-top: 2px solid rgb(239, 241, 243);
+	border-left: 2px solid rgb(239, 241, 243);
+	border-right: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	padding: 6px;
+	font-size: 1em;
+	border-radius: 4px;
+	outline: none;
+	background-color: var(--gray-light);
+	color: var(--bg);
+}
+
+input:focus {
+	border-color: var(--highlight);
+}
+
+input.invalidField {
+	border-color: var(--error);
+}
+
+label.requiredField::after {
+	color: var(--highlight);
+	content: ' *';
+}
+
+.fieldError {
+	text-align: right;
+	margin-top: 4px;
+}
+
+.formField {
+	margin-bottom: 16px;
+}
+
+.formFieldLabel {
+	display: block;
+	margin-bottom: 4px;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+.formSubmitButton {
+	text-transform: uppercase;
+	padding: 16px;
+	border-radius: 3px;
+}

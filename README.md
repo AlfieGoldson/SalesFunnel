@@ -1,2 +1,0 @@
-# SalesFunnel
-Created with CodeSandbox
